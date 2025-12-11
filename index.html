@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معرض أعمالي - CV احترافي</title>
+    <meta name="description" content="محفظة أعمال احترافية — مطور واجهات (HTML/CSS/JS) — مشاريع، مهارات، خبرة، تواصل.">
+    
+    <!-- Fonts + Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader">
+            <div class="loader-circle"></div>
+            <div class="loader-text">جاري التحميل...</div>
+        </div>
+    </div>
+
+    <!-- Theme Toggle -->
+    <button id="themeToggle" class="theme-btn" aria-label="Toggle theme">
+        <i class="fa-solid fa-moon"></i>
+    </button>
+
+    <!-- NAVBAR -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-inner">
+            <a class="brand" href="#home">
+                <img src="./imag/صورة واتساب بتاريخ 2025-10-23 في 16.24.47_f5d664ea.jpg" alt="logo" class="logo-img" id="logoImg">
+                <span class="brand-text" id="brandName">اسمك <strong>هنا</strong></span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#home" class="nav-link">الرئيسية</a>
+                <a href="#about" class="nav-link">من أنا</a>
+                <a href="#projects" class="nav-link">مشاريعي</a>
+                <a href="#skills" class="nav-link">مهاراتي</a>
+                <a href="#contact" class="nav-link">تواصل</a>
+                <button class="admin-btn" id="adminBtn">
+                    <i class="fas fa-cog"></i> لوحة التحكم
+                </button>
+            </nav>
+
+            <button id="menuBtn" class="menu-btn" aria-label="قائمة">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- HERO / HOME -->
+    <section id="home" class="hero">
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="greeting">مرحباً، أنا</span>
+                    <span class="name" id="heroName">اسمك</span>
+                    <span class="surname" id="heroSurname">لقبك</span>
+                </h1>
+                <p class="lead" id="heroDescription">
+                    Front-End Developer & UI/UX Enthusiast — أُحوّل الأفكار إلى واجهات سريعة، متجاوبة وجذابة.
+                </p>
+
+                <div class="cta-group">
+                    <a href="#projects" class="btn primary">
+                        <i class="fas fa-briefcase"></i> شاهد مشاريعي
+                    </a>
+                    <a href="#contact" class="btn ghost">
+                        <i class="fas fa-envelope"></i> تواصل معايا
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" id="projectsCount">0</span>
+                        <span class="stat-label">مشروع</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="skillsCount">0</span>
+                        <span class="stat-label">مهارة</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="experienceCount">0</span>
+                        <span class="stat-label">سنة خبرة</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <div class="image-container">
+                    <div class="image-wrapper">
+                        <img src="./imag/صورة واتساب بتاريخ 2025-10-23 في 16.24.47_f5d664ea.jpg" alt="صحتك الشخصية" id="heroImage">
+                        <div class="image-border"></div>
+                        <div class="social-links">
+                            <a href="#" class="social-link" id="githubLink">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="social-link" id="linkedinLink">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="social-link" id="twitterLink">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">من أنا</h2>
+                <p class="section-subtitle" id="aboutSubtitle">
+                    مطور ويب شغوف بإنشاء تجارب رقمية مذهلة
+                </p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-content">
+                    <div class="about-text">
+                        <p id="aboutText">
+                            أنا مطور واجهات أمامية (Front-End Developer) بخبرة في تطوير مواقع وتطبيقات ويب حديثة وسريعة الاستجابة. أستخدم أحدث التقنيات والأدوات لتحويل الأفكار إلى واقع رقمي جذاب.
+                        </p>
+                        <p id="aboutText2">
+                            شغوف بتصميم واجهات مستخدم ممتعة وسهلة الاستخدام، مع التركيز على الأداء العالي وتجربة المستخدم المثلى.
+                        </p>
+                    </div>
+
+                    <div class="about-info">
+                        <div class="info-item">
+                            <i class="fas fa-user"></i>
+                            <div class="info-content">
+                                <span class="info-label">الاسم</span>
+                                <span class="info-value" id="infoName">اسمك هنا</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-briefcase"></i>
+                            <div class="info-content">
+                                <span class="info-label">المسمى الوظيفي</span>
+                                <span class="info-value" id="infoTitle">Front-End Developer</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="info-content">
+                                <span class="info-label">الموقع</span>
+                                <span class="info-value" id="infoLocation">القاهرة، مصر</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div class="info-content">
+                                <span class="info-label">البريد الإلكتروني</span>
+                                <span class="info-value" id="infoEmail">email@example.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-image">
+                    <div class="about-image-container">
+                        <img src="./imag/‏‏DALL·E 2025-09-28 18.33.50 - A digital representation of HTML, CSS, and JavaScript logos. The HTML logo is a bold orange shield with 'HTML' written on it. The CSS logo is a blue s - نسخة.webp" alt="عني" id="aboutImage">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">مشاريعي</h2>
+                <p class="section-subtitle">أحدث أعمالي ومشاريعي التي تطورت بها</p>
+            </div>
+
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-th"></i> الكل
+                </button>
+                <button class="filter-btn" data-filter="web">
+                    <i class="fas fa-globe"></i> مواقع ويب
+                </button>
+                <button class="filter-btn" data-filter="app">
+                    <i class="fas fa-mobile-alt"></i> تطبيقات
+                </button>
+                <button class="filter-btn" data-filter="design">
+                    <i class="fas fa-palette"></i> تصميم
+                </button>
+            </div>
+
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Projects will be dynamically added here -->
+            </div>
+
+            <div class="empty-state" id="emptyState">
+                <div class="empty-icon">
+                    <i class="fas fa-folder-open"></i>
+                </div>
+                <h3>لا توجد مشاريع بعد</h3>
+                <p>ابدأ بإضافة أول مشروع لك!</p>
+                <button class="btn primary" onclick="document.getElementById('adminBtn').click()">
+                    <i class="fas fa-plus"></i> إضافة أول مشروع
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">مهاراتي</h2>
+                <p class="section-subtitle">التقنيات والأدوات التي أتقنها</p>
+            </div>
+
+            <div class="skills-grid" id="skillsGrid">
+                <!-- Skills will be dynamically added here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">تواصل معي</h2>
+                <p class="section-subtitle">لنتواصل ونعمل معاً</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>لنتواصل!</h3>
+                    <p>يمكنك التواصل معي عبر أي من هذه الوسائل</p>
+                    
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label">البريد الإلكتروني</span>
+                                <span class="contact-value" id="contactEmail">email@example.com</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label">الهاتف</span>
+                                <span class="contact-value" id="contactPhone">+20 100 123 4567</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label">الموقع</span>
+                                <span class="contact-value" id="contactLocation">القاهرة، مصر</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links-large">
+                        <a href="#" class="social-link-large" id="githubLinkLarge">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link-large" id="linkedinLinkLarge">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link-large" id="twitterLinkLarge">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link-large" id="instagramLinkLarge">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">الاسم</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">البريد الإلكتروني</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" required>
+                            <label for="subject">الموضوع</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <label for="message">الرسالة</label>
+                        </div>
+                        <button type="submit" class="btn primary btn-full">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>إرسال الرسالة</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="https://via.placeholder.com/40x40/7c3aed/FFFFFF?text=CV" alt="logo" class="footer-logo">
+                    <p>© 2024 <span id="footerName">اسمك</span>. جميع الحقوق محفوظة.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">الرئيسية</a>
+                    <a href="#about">من أنا</a>
+                    <a href="#projects">مشاريعي</a>
+                    <a href="#skills">مهاراتي</a>
+                    <a href="#contact">تواصل</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link" id="githubFooter">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="social-link" id="linkedinFooter">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="social-link" id="twitterFooter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Admin Panel Modal -->
+    <div class="modal" id="adminModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>لوحة التحكم</h3>
+                <button class="close-btn" id="closeAdminModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="admin-tabs">
+                    <button class="tab-btn active" data-tab="profile">
+                        <i class="fas fa-user"></i> الملف الشخصي
+                    </button>
+                    <button class="tab-btn" data-tab="projects">
+                        <i class="fas fa-briefcase"></i> المشاريع
+                    </button>
+                    <button class="tab-btn" data-tab="skills">
+                        <i class="fas fa-cogs"></i> المهارات
+                    </button>
+                </div>
+
+                <!-- Profile Tab -->
+                <div class="tab-content active" id="profileTab">
+                    <form id="profileForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="profileName">الاسم</label>
+                                <input type="text" id="profileName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="profileSurname">اللقب</label>
+                                <input type="text" id="profileSurname" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="profileTitle">المسمى الوظيفي</label>
+                            <input type="text" id="profileTitle" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="profileDescription">الوصف</label>
+                            <textarea id="profileDescription" rows="3" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="profileAbout">نبذة عنك</label>
+                            <textarea id="profileAbout" rows="4" required></textarea>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="profileEmail">البريد الإلكتروني</label>
+                                <input type="email" id="profileEmail" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="profilePhone">الهاتف</label>
+                                <input type="tel" id="profilePhone" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="profileLocation">الموقع</label>
+                            <input type="text" id="profileLocation" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="profileExperience">سنوات الخبرة</label>
+                            <input type="number" id="profileExperience" min="0" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="profileGithub">GitHub</label>
+                                <input type="url" id="profileGithub" placeholder="https://github.com/username">
+                            </div>
+                            <div class="form-group">
+                                <label for="profileLinkedin">LinkedIn</label>
+                                <input type="url" id="profileLinkedin" placeholder="https://linkedin.com/in/username">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="profileTwitter">Twitter</label>
+                            <input type="url" id="profileTwitter" placeholder="https://twitter.com/username">
+                        </div>
+                        <button type="submit" class="btn primary">
+                            <i class="fas fa-save"></i> حفظ التغييرات
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Projects Tab -->
+                <div class="tab-content" id="projectsTab">
+                    <div class="tab-header">
+                        <h4>إدارة المشاريع</h4>
+                        <button class="btn primary" id="addProjectBtn">
+                            <i class="fas fa-plus"></i> إضافة مشروع
+                        </button>
+                    </div>
+                    <div class="projects-list" id="projectsList">
+                        <!-- Projects list will be dynamically added here -->
+                    </div>
+                </div>
+
+                <!-- Skills Tab -->
+                <div class="tab-content" id="skillsTab">
+                    <div class="tab-header">
+                        <h4>إدارة المهارات</h4>
+                        <button class="btn primary" id="addSkillBtn">
+                            <i class="fas fa-plus"></i> إضافة مهارة
+                        </button>
+                    </div>
+                    <div class="skills-list" id="skillsList">
+                        <!-- Skills list will be dynamically added here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add/Edit Project Modal -->
+    <div class="modal" id="projectModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="projectModalTitle">إضافة مشروع جديد</h3>
+                <button class="close-btn" id="closeProjectModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="projectForm">
+                    <div class="form-group">
+                        <label for="projectName">اسم المشروع</label>
+                        <input type="text" id="projectName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="projectCategory">الفئة</label>
+                        <select id="projectCategory" required>
+                            <option value="web">موقع ويب</option>
+                            <option value="app">تطبيق</option>
+                            <option value="design">تصميم</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="projectDescription">الوصف</label>
+                        <textarea id="projectDescription" rows="3" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="projectImage">رابط الصورة</label>
+                        <input type="url" id="projectImage" placeholder="https://example.com/image.jpg">
+                    </div>
+                    <div class="form-group">
+                        <label for="projectLink">رابط المشروع</label>
+                        <input type="url" id="projectLink" placeholder="https://example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="projectGithub">رابط GitHub</label>
+                        <input type="url" id="projectGithub" placeholder="https://github.com/username/repo">
+                    </div>
+                    <div class="form-group">
+                        <label for="projectTech">التقنيات المستخدمة (افصل بينها بفاصلة)</label>
+                        <input type="text" id="projectTech" placeholder="HTML, CSS, JavaScript">
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn ghost" id="cancelProjectBtn">إلغاء</button>
+                        <button type="submit" class="btn primary">
+                            <i class="fas fa-save"></i> حفظ المشروع
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add/Edit Skill Modal -->
+    <div class="modal" id="skillModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="skillModalTitle">إضافة مهارة جديدة</h3>
+                <button class="close-btn" id="closeSkillModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="skillForm">
+                    <div class="form-group">
+                        <label for="skillName">اسم المهارة</label>
+                        <input type="text" id="skillName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="skillLevel">المستوى (%)</label>
+                        <input type="number" id="skillLevel" min="0" max="100" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="skillIcon">الأيقونة (Font Awesome class)</label>
+                        <input type="text" id="skillIcon" placeholder="fab fa-html5">
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn ghost" id="cancelSkillBtn">إلغاء</button>
+                        <button type="submit" class="btn primary">
+                            <i class="fas fa-save"></i> حفظ المهارة
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast-content">
+            <i class="fas fa-check-circle"></i>
+            <span id="toastMessage">تمت العملية بنجاح!</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
