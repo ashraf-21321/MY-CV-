@@ -1,4 +1,6 @@
 // ===== GLOBAL VARIABLES =====
+alert("JS Loaded");
+
 let projects = [];
 let skills = [];
 let profileData = {};
